@@ -1,0 +1,22 @@
+on:
+    push:
+        branches:
+            - main
+
+
+jobs:
+    build-image:
+        runs-on: ubuntu-latest
+        steps:
+            - name: check-out repository
+              uses: actions/checkout@v4
+
+            - name: setup docker
+              uses: docker/setup-buildx-action@v3
+
+            - name: build docker file
+              id: build
+              uses: docker/build-push-action@v5
+              with:
+                push: false
+                tags: lebenslauf:v1
