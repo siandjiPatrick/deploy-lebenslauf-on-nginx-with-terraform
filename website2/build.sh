@@ -1,0 +1,1 @@
+gcloud builds submit --tag europe-west4-docker.pkg.dev/cw-patrick-sandbox/academy-session/ngnix:v8
