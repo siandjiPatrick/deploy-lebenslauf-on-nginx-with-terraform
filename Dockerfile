@@ -1,6 +1,6 @@
 FROM nginx:stable
 
-WORKDIR /var/www/html
+WORKDIR /usr/share/nginx/html/
 COPY website/* ./
 
 CMD ["nginx", "-g", "daemon off;"]
